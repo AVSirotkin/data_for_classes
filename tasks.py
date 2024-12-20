@@ -212,18 +212,17 @@ def task_7(work_id):
     import pandas as pd
     train = pd.read_csv("https://raw.githubusercontent.com/AVSirotkin/data_for_classes/master/brca.csv")
     
-    print("Remove first column.")
+    print("Remove first two columns.")
     print("Use column \"y\" as target variable.")
     print("Use RandomForestClassifier for prediction.")
     print("Based on cross validation chouse best cobination of parameters:")
-    print("n_estimators: 10, 30, 70, 100, 200")
+    print("n_estimators: 10, 30, 70, 100")
     print("max_depth: 3, 5, 7, 10")
-    print("min_samples_leaf: 1, 3, 5, 7, 9, 11, 15, 21")
+    print("min_samples_leaf: 1, 4, 7, 11, 15, 21")
 
-    print("Based on cross validation chouse best parameters.")
     print("Use best combination, to train model on all dataset.")
 
-    print("Answer is values of best parameters combination, and accurasy of last model of full dataset.")
+    print("Answer is values of best parameters combination, and accuracy of last model of full dataset.")
     
     print("Always use random_state = work_id.")
     

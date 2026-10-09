@@ -1,4 +1,6 @@
 def task_1(work_id):    
+    import requests
+    requests.get(f"https://count.chgk.fun/api/{work_id}/1")
 
     import random
     from matplotlib import pyplot as plt
@@ -72,6 +74,8 @@ def task_1(work_id):
     
     
 def task_2(work_id):
+    import requests
+    requests.get(f"https://count.chgk.fun/api/{work_id}/2")
     import random
 
     questions = ["Determine if an email is spam based on existing database of emails marked \"Spam\" or \"Not Spam\"",
@@ -97,6 +101,9 @@ def task_2(work_id):
 
 
 def task_3(work_id):
+    import requests
+    requests.get(f"https://count.chgk.fun/api/{work_id}/3")
+
     import random
     from sklearn import datasets
     import numpy as np
@@ -109,11 +116,13 @@ def task_3(work_id):
 
 
 def task_4(work_id):
+    import requests
+    requests.get(f"https://count.chgk.fun/api/{work_id}/4")
+   
     import numpy as np
     import random
     from matplotlib import pyplot as plt
     from sklearn.cluster import KMeans
-
 
 
     random.seed(work_id)
@@ -148,12 +157,16 @@ def task_4(work_id):
     plt.xlabel('$k$')
     plt.ylabel('$J(C_k)$');
   
-    print("For provided graph, chose optimal number of clusters")
+    print("For provided graph, chose optimal number of clusters using elbow heuristics.")      
     
     return(inertia)
 
 
 def task_5(work_id):
+
+    import requests
+    requests.get(f"https://count.chgk.fun/api/{work_id}/5")
+
     import random
     import numpy as np
     n_train = 150        
@@ -194,6 +207,10 @@ def task_5(work_id):
 
 
 def task_6(work_id):
+    import requests
+    requests.get(f"https://count.chgk.fun/api/{work_id}/6")
+
+
     import random
     import pandas as pd
     
@@ -208,11 +225,14 @@ def task_6(work_id):
     
     
 def task_7(work_id):
+    import requests
+    requests.get(f"https://count.chgk.fun/api/{work_id}/7")
+
     import random
     import pandas as pd
     train = pd.read_csv("https://raw.githubusercontent.com/AVSirotkin/data_for_classes/master/brca.csv")
     
-    print("Remove first two columns.")
+    print("Remove first column.")
     print("Use column \"y\" as target variable.")
     print("Use RandomForestClassifier for prediction.")
     print("Based on cross validation chouse best cobination of parameters:")
@@ -228,3 +248,48 @@ def task_7(work_id):
     
     return(train.sample(450, random_state = work_id))
      
+def task_8(work_id):
+    import requests
+    requests.get(f"https://count.chgk.fun/api/{work_id}/8")
+
+    import numpy as np
+    import random
+    from matplotlib import pyplot as plt
+    from sklearn.cluster import KMeans
+
+
+
+    random.seed(work_id + 13)
+    num = random.choice([4,5,6,7])
+    cl_x = [0, 3, 2, 1,  3, -1, 1]
+    cl_y = [-1, 2, 0, 1.5, -1, 3, -2]
+    id_s = random.sample([0,1,2,3,4,5,6], num)
+    
+    X = np.zeros((420, 2))
+    np.random.seed(seed=work_id)
+  
+    p = 420 // num
+    
+#    print(p, num)
+    
+    for ii, i in enumerate(id_s):
+        
+        X[ii*p:((ii+1)*(p)), 0] = np.random.normal(loc=cl_x[i], scale=.15, size=p)
+        X[ii*p:((ii+1)*(p)), 1] = np.random.normal(loc=cl_y[i], scale=.15, size=p)
+
+    print("For provided graph, chose optimal number of clusters")
+
+    print("For the given dataset, cluster it with KMeans for k = 2, ..., 10.")
+    print("For each k, compute the silhouette score of the clustering.")
+    print("Return the value of k that maximizes the silhouette score,")
+    print("together with the corresponding silhouette value itself.")
+    print()
+    print("Use KMeans(n_clusters=k, n_init=10, random_state=work_id+3) for reproducibility.")
+    print("Do not preprocess data before clustering.")
+    print()
+    print("Provide your answers in the form:")
+    print("    answer_8_k = <integer between 2 and 10>")
+    print("    answer_8_silhouette = <float>")
+
+
+    return(X)

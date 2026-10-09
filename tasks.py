@@ -1,6 +1,6 @@
 def task_1(work_id):    
     import requests
-    requests.get(f"https://count.chgk.fun/api/{work_id}/1")
+    requests.get(f"https://svoyak.chgk.fun/api/counter/{work_id}/1")
 
     import random
     from matplotlib import pyplot as plt
@@ -75,7 +75,7 @@ def task_1(work_id):
     
 def task_2(work_id):
     import requests
-    requests.get(f"https://count.chgk.fun/api/{work_id}/2")
+    requests.get(f"https://svoyak.chgk.fun/api/counter/{work_id}/2")
     import random
 
     questions = ["Determine if an email is spam based on existing database of emails marked \"Spam\" or \"Not Spam\"",
@@ -102,7 +102,7 @@ def task_2(work_id):
 
 def task_3(work_id):
     import requests
-    requests.get(f"https://count.chgk.fun/api/{work_id}/3")
+    requests.get(f"https://svoyak.chgk.fun/api/counter/{work_id}/3")
 
     import random
     from sklearn import datasets
@@ -117,7 +117,7 @@ def task_3(work_id):
 
 def task_4(work_id):
     import requests
-    requests.get(f"https://count.chgk.fun/api/{work_id}/4")
+    requests.get(f"https://svoyak.chgk.fun/api/counter/{work_id}/4")
    
     import numpy as np
     import random
@@ -165,7 +165,7 @@ def task_4(work_id):
 def task_5(work_id):
 
     import requests
-    requests.get(f"https://count.chgk.fun/api/{work_id}/5")
+    requests.get(f"https://svoyak.chgk.fun/api/counter/{work_id}/5")
 
     import random
     import numpy as np
@@ -208,7 +208,7 @@ def task_5(work_id):
 
 def task_6(work_id):
     import requests
-    requests.get(f"https://count.chgk.fun/api/{work_id}/6")
+    requests.get(f"https://svoyak.chgk.fun/api/counter/{work_id}/6")
 
 
     import random
@@ -226,7 +226,7 @@ def task_6(work_id):
     
 def task_7(work_id):
     import requests
-    requests.get(f"https://count.chgk.fun/api/{work_id}/7")
+    requests.get(f"https://svoyak.chgk.fun/api/counter/{work_id}/7")
 
     import random
     import pandas as pd
@@ -250,7 +250,7 @@ def task_7(work_id):
      
 def task_8(work_id):
     import requests
-    requests.get(f"https://count.chgk.fun/api/{work_id}/8")
+    requests.get(f"https://svoyak.chgk.fun/api/counter/{work_id}/8")
 
     import numpy as np
     import random
